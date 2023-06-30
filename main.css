@@ -1,4 +1,5 @@
 body{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,9 +14,11 @@ header{
     background-color: #d3f7fe;
 }
 footer{
-    position: relative;
+    z-index: 2;
+    position: absolute;
     bottom: 0;
     height: 90px;
+    width: 100%;
     background-color: #465355;
 }
 .header_text{
@@ -68,7 +71,18 @@ footer{
     background: #000;
     color: #ffffff;
 }
-
+.bar_main{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0 0 0 20px;
+}
+.bar_main:hover{
+    background: #000;
+    color: #ffffff;
+}
 
 .barside{
     height: 100%;
@@ -91,37 +105,45 @@ footer{
 
 
 .barside ul{
-
-    border: 1px solid #000;
-
+    display: block;
+    width: 100%;
+    padding: 0 0 0 20px;  
 }
 
 .barside ul li{
 
-    background-color: #f6b0b0;
+    /* background-color: #f6b0b0; */
+    width: 100%;
     margin: 7px;
+    margin-left: 0;
     position: relative;
-
+    display: none;
     padding-left: 30px;
 }
-
+.barside ul:hover > li{
+    display: block;
+}
+.barside ul li:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
 
 .icon{
     position: absolute;
     width: 15px;
     height: 15px;
-    left: 0;
+    left: 10px;
     top: 50%;
     transform: translate(0, -50%);
+    transform-origin: right top;
 
 }
 
-.icon:hover{
+.barside ul li:hover > .icon{
     
     transform: rotate(45deg);
-    transform-origin:center;
-
-    transition: all 2s;
+    background-color: #ffffff;
+    transition: all 0.5s;
 }
 
 .icon:before,
