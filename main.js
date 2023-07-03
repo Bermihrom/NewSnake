@@ -1,3 +1,0 @@
-function createField(){
-    const mainField = 
-}
