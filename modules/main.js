@@ -5,6 +5,7 @@ class App {
 
   
   constructor(container) {
+
     this.layer = new Layer(container);
 
     this.rect = {
@@ -36,4 +37,14 @@ class App {
   }
 }
 
-onload = () => { new App(document.body) }
+
+
+
+onload = () => { 
+  
+  const main = document.querySelector('.wrapper');
+
+
+  new App(main) 
+
+}
